@@ -1,3 +1,4 @@
+// metodo 1
 var numeri = [];
 for (var i = 0; i < 100; i++) {
   if ((i + 1) % 3 == 0 && (i + 1) % 5 != 0) {
@@ -14,3 +15,27 @@ for (var i = 0; i < 100; i++) {
   }
 }
 console.log(numeri);
+// /metodo 1
+
+// metodo 2
+var numeri = [];
+for (var i = 0; i < 100; i++) {
+  numeri[i] = i + 1;
+}
+var i = 2;
+while (i < 100) {
+  numeri[i] = 'Fizz';
+  i = i + 3;
+}
+var i = 4;
+while (i < 100) {
+  if (parseInt(numeri[i]) == numeri[i]) {
+    numeri[i] = 'Buzz';
+  }
+  else {
+    numeri[i] += 'Buzz';
+  }
+  i = i + 5;
+}
+console.log(numeri);
+// /metodo 2
