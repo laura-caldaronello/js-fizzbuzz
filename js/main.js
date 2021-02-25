@@ -39,3 +39,24 @@ while (i < 100) {
 }
 console.log(numeri);
 // /metodo 2
+
+// metodo 3
+var numeri = [];
+for (var j = 0; j < 3; j++) {
+  for (var i = 0; i < 100; i++) {
+    if (j == 0) {
+      numeri[i] = i + 1;
+    }
+    else if (j == 1 && (i + 1) % 3 == 0) {
+      numeri[i] = 'Fizz';
+    }
+    else if (j == 1 && (i + 1) % 5 == 0) {
+      numeri[i] = 'Buzz';
+    }
+    else if (j == 2 && (i + 1) % 15 == 0) {
+      numeri[i] += 'Buzz';
+    }
+  }
+}
+console.log(numeri);
+// /metodo 3
